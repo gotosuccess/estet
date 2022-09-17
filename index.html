@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Estet</title>
+  <link rel="preload" href="fonts/MontserratRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MontserratSemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSansRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="header__inner">
+
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
+
+      <picture>
+        <source srcset="./img/header-logo.avif" type="image/avif">
+        <source srcset="./img/header-logo.webp" type="image/webp">
+        <img loading="lazy" src="./img/header-logo.png" class="image header__header-logo" width="260" height="50" alt="logo">
+      </picture>
+
+      <nav class="nav" title="menu" data-menu>
+        <div class="nav__title">Меню</div>
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="#" class="nav__link active" data-menu-item>Стоимость</a></li>
+          <li class="nav__item"><a href="#" class="nav__link" data-menu-item>Модели дверей</a></li>
+          <li class="nav__item"><a href="#" class="nav__link" data-menu-item>Сроки</a></li>
+          <li class="nav__item"><a href="#" class="nav__link" data-menu-item>Фото</a></li>
+        </ul>
+
+        <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close>
+          <picture>
+            <source srcset="./img/close.avif" type="image/avif">
+            <source srcset="./img/close.webp" type="image/webp">
+            <img loading="lazy" src="./img/close.png" class="image" width="24" height="24" alt="burger-close">
+          </picture>
+        </button>
+      </nav>
+
+      <div class="header__phone-modal">
+        <button class="btn-reset header__btn-modal" data-graph-path="">Заказать звонок</button>
+          <div class="graph-modal">
+            <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="">
+              <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+                <picture>
+                  <source srcset="./img/close.avif" type="image/avif">
+                  <source srcset="./img/close.webp" type="image/webp">
+                  <img loading="lazy" src="./img/close.png" class="image" width="24" height="24" alt="close-icon">
+                </picture>
+              </button>
+              <div class="graph-modal__content">
+                <h4 class="graph-modal__title">Заказать звонок</h4>
+
+                <form action="#" class="form">
+
+                  <label class="form__label">
+                    <span class="form__span-name">Имя</span>
+                    <input type="text" name="Имя" class="input-reset form__input" required placeholder="Имя">
+                  </label>
+
+                  <label class="form__label">
+                    <span class="form__span-name">Номер телефона</span>
+                    <input type="tel" name="Имя" class="input-reset form__input" maxlength="11" required placeholder="Номер телефона">
+                  </label>
+
+                  <p class="form__descr">Отправляя данную форму, я подтверждаю согласие на обработку<span>
+                    <a class="form__descr-link" href="">персональных данных.</a>
+                  </span></p>
+
+                  <button class="btn-reset form__btn">Заказать звонок</button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="header__phone">
+        <span>Бесплатный звонок</span>
+        <a class="header__phone-link" href="tel:88002225965"><span>8 800 222 59 65</span></a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero">
+  <div class="container">
+    <div class="hero__wrapper">
+      <h1 class="hero__title">
+        Скрытые двери от фабрики <span>Estet</span> всегда в наличии
+      </h1>
+      <div class="hero__content">
+        <p class="hero__descr">Мы предлагаем интерьерные решения от фабрики Estet. От заказа до установки 4 дня. Модели <span>от 1900 до 2400 мм</span> всегда в наличии </p>
+        <button class="btn-reset hero__btn btn" type="submit">Получить консультацию</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="madein">
+  <div class="container">
+    <div class="madein__wrapper">
+      <div class="madein__content">
+        <ul class="list-reset madein__list">
+          <li class="madein__item">
+            <picture>
+              <source srcset="./img/qr-code.avif" type="image/avif">
+              <source srcset="./img/qr-code.webp" type="image/webp">
+              <img loading="lazy" src="./img/qr-code.png" class="image" width="32" height="32" alt="qr-code-logo">
+            </picture>
+            <p class="madein__text">Напрямую от производителя</p>
+          </li>
+          <li class="madein__item">
+            <picture>
+              <source srcset="./img/room.avif" type="image/avif">
+              <source srcset="./img/room.webp" type="image/webp">
+              <img loading="lazy" src="./img/room.png" class="image" width="27" height="27" alt="room-logo">
+            </picture>
+            <p class="madein__text">Двери от 1900 до 2400 мм всегда в наличии</p>
+          </li>
+          <li class="madein__item">
+            <picture>
+              <source srcset="./img/rubl.avif" type="image/avif">
+              <source srcset="./img/rubl.webp" type="image/webp">
+              <img loading="lazy" src="./img/rubl.png" class="image" width="19" height="24" alt="ruble">
+            </picture>
+            <p class="madein__text">Честная цена за комплект от 24 000 рублей</p>
+          </li>
+          <li class="madein__item">
+            <picture>
+              <source srcset="./img/premium.avif" type="image/avif">
+              <source srcset="./img/premium.webp" type="image/webp">
+              <img loading="lazy" src="./img/premium.png" class="image" width="22" height="28" alt="premium-logo">
+            </picture>
+            <p class="madein__text">Гарантия 5 лет</p>
+          </li>
+        </ul>
+      </div>
+      <div class="madein__content-image">
+
+        <picture>
+          <source srcset="./img/content-image.avif" type="image/avif">
+          <source srcset="./img/content-image.webp" type="image/webp">
+          <img loading="lazy" src="./img/content-image.png" class="madein__content-img" width="1016" height="572" alt="image">
+        </picture>
+
+        <picture>
+          <source srcset="./img/madein-image.avif" type="image/avif">
+          <source srcset="./img/madein-image.webp" type="image/webp">
+          <img loading="lazy" src="./img/madein-image.png" class="madein__madein-image" width="420" height="204" alt="madein-image">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="set">
+  <div class="container">
+    <div class="set__wrapper">
+      <div class="set__content">
+        <h2 class="set__title">
+          Честная цена за комплект
+          <span>от 24 000 рублей</span>
+        </h2>
+        <p class="set__descr">Мы также предлагаем скидку при заказе по телефону в 15%</p>
+        <button class="btn-reset set__btn btn">Получить расчет</button>
+      </div>
+      <div class="set__conten-image">
+        <picture>
+          <source srcset="./img/set-image.avif" type="image/avif">
+          <source srcset="./img/set-image.webp" type="image/webp">
+          <img loading="lazy" src="./img/set-image.png" class="image" width="667" height="720" alt="image-set">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="door">
+  <div class="container">
+    <h2 class="door__title">Виды дверей</h2>
+    <p class="door__descr">
+      Какие скрытые двери вы ищете? Подберем лучшее решение для вашей идеи
+    </p>
+
+    <div class="door-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h4 class="door__text">Скрытые двери под декоративную штукатурку</h4>
+
+          <picture>
+            <source srcset="./img/door-1.avif" type="image/avif" />
+            <source srcset="./img/door-1.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/door-1.png"
+              class="image"
+              width="318"
+              height="478"
+              alt="door"
+            />
+          </picture>
+
+          <button class="btn-reset door__btn btn">
+            Получить точный расчет
+          </button>
+        </div>
+
+        <div class="swiper-slide">
+          <h4 class="door__text">Скрытые двери под декоративную штукатурку</h4>
+
+          <picture>
+            <source srcset="./img/door-1.avif" type="image/avif" />
+            <source srcset="./img/door-1.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/door-1.png"
+              class="image"
+              width="318"
+              height="478"
+              alt="door"
+            />
+          </picture>
+
+          <button class="btn-reset door__btn btn">
+            Получить точный расчет
+          </button>
+        </div>
+
+        <div class="swiper-slide">
+          <h4 class="door__text">Скрытые двери под декоративную штукатурку</h4>
+
+          <picture>
+            <source srcset="./img/door-3.avif" type="image/avif" />
+            <source srcset="./img/door-3.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/door-3.png"
+              class="image"
+              width="318"
+              height="478"
+              alt="door"
+            />
+          </picture>
+
+          <button class="btn-reset door__btn btn">
+            Получить точный расчет
+          </button>
+        </div>
+
+        <div class="swiper-slide">
+          <h4 class="door__text">Скрытые двери под декоративную штукатурку</h4>
+
+          <picture>
+            <source srcset="./img/door-3.avif" type="image/avif" />
+            <source srcset="./img/door-3.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/door-3.png"
+              class="image"
+              width="318"
+              height="478"
+              alt="door"
+            />
+          </picture>
+
+          <button class="btn-reset door__btn btn">
+            Получить точный расчет
+          </button>
+        </div>
+
+      </div>
+      <div class="door__btn-box">
+        <div class="button-prev">
+          <button class="btn-reset arrow-prev">
+            <picture>
+              <source srcset="./img/arrow-prev.avif" type="image/avif" />
+              <source srcset="./img/arrow-prev.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arrow-prev.png"
+                class="image"
+                width="60"
+                height="60"
+                alt="arrow-icon-prev"
+              />
+            </picture>
+          </button>
+        </div>
+        <div class="button-next">
+          <button class="btn-reset arrow-next">
+            <picture>
+              <source srcset="./img/arrow-next.avif" type="image/avif" />
+              <source srcset="./img/arrow-next.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/arrow-next.png"
+                class="image"
+                width="60"
+                height="60"
+                alt="arrow-icon-next"
+              />
+            </picture>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      <section class="advantage">
+  <div class="container">
+    <h2 class="advantage__titles">Преимущества</h2>
+    <div class="advantage__wrapper">
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage1.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage1.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage1.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">Высота до 3 метров</h4>
+          <p class="advantage__descr">Изготавливаем двери любых нестандартных размеров в высоту и ширину. Доступны полотна толщиной 35, 40 и 55 мм.</p>
+        </div>
+      </div>
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage2.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage2.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage2.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">Алюминиевая кромка</h4>
+          <p class="advantage__descr">Производим двери как с алюминиевой кромкой, так и без. 2 цвета кромки толщиной 1,4 мм на выбор: матовый хром и черный.</p>
+        </div>
+      </div>
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage3.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage3.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage3.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">Прочный короб</h4>
+          <p class="advantage__descr">Прочный каркас из цельногнутого алюминия со специальными ребрами жесткости для сохранения геометрии короба.</p>
+        </div>
+      </div>
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage4.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage4.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage4.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">Шумоподавление</h4>
+          <p class="advantage__descr">Закладка из экструзионной плиты ДСП обеспечивает шумопоглощение до 35 Дб.</p>
+        </div>
+      </div>
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage5.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage5.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage5.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">Двусторонний дизайн</h4>
+          <p class="advantage__descr">Выбирайте оформление сторон скрытой двери под дизайн помещения.</p>
+        </div>
+      </div>
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage6.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage6.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage6.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">«От себя» и «на себя»</h4>
+          <p class="advantage__descr">2 направления открывания двери благодаря уникальной конструкции короба.</p>
+        </div>
+      </div>
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage7.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage7.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage7.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">Итальянский магнитный замок</h4>
+          <p class="advantage__descr">Плавный и тихий, 500 000 циклов открывания, равное 150 лет работы.</p>
+        </div>
+      </div>
+      <div class="advantage__item">
+        <div class="advantage__image-box">
+          <picture>
+            <source srcset="./img/advantage/advantage8.avif" type="image/avif">
+            <source srcset="./img/advantage/advantage8.webp" type="image/webp">
+            <img loading="lazy" src="./img/advantage/advantage8.png" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <div class="advantage__content">
+          <h4 class="advantage__title">«Умный» порог</h4>
+          <p class="advantage__descr">Исключает проникновение шумов и запахов, повышает показатели теплоизоляции.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="order">
+  <div class="container">
+    <h2 class="order__title">От заказа до установки <br> — 4 дня</h2>
+    <div class="order__wrapper">
+      <div class="order__image-box">
+        <picture>
+          <source srcset="./img/order1.avif" type="image/avif">
+          <source srcset="./img/order1.webp" type="image/webp">
+          <img loading="lazy" src="./img/order1.png" class="image" width="669" height="721" alt="order-door">
+        </picture>
+      </div>
+
+      <div class="order__graphic">
+        <ul class="list-reset order__list">
+          <li class="order__item">
+            <div class="order__day">1 день</div>
+            <div class="order__dot"></div>
+            <div class="order__name">Заявка</div>
+          </li>
+          <li class="order__item">
+            <div class="order__day">1 день</div>
+            <div class="order__dot"></div>
+            <div class="order__name">Замерщик</div>
+          </li>
+          <li class="order__item">
+            <div class="order__day">1 день</div>
+            <div class="order__dot"></div>
+            <div class="order__name">Доставка</div>
+          </li>
+          <li class="order__item">
+            <div class="order__day">1 день</div>
+            <div class="order__dot"></div>
+            <div class="order__name">Установка</div>
+          </li>
+        </ul>
+
+        <button class="btn-reset btn order__btn" data-graph-path="">Оставить заявку</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      <section class="departure">
+  <div class="container">
+    <div class="departure__wrapper">
+    <div class="departure__name-box">
+      <h2 class="departure__title">Выезд замерщика и выезд менеджера</h2>
+      <p class="departure__descr">Закажите выезд замерщика сейчас и получите персональную скидку до 15%</p>
+    </div>
+
+    <ul class="list-reset departure__list">
+      <li class="departure__item">
+        <picture>
+          <source srcset="./img/departure/phone.avif" type="image/avif">
+          <source srcset="./img/departure/phone.webp" type="image/webp">
+          <img loading="lazy" src="./img/departure/phone.png" class="image" width="60" height="60" alt="phone-icon">
+        </picture>
+        <div class="departure__item-descr">
+          Закажите звонок и мы перезвоним вам в течение 5 минут
+        </div>
+        <button class="btn-reset departure__btn" type="submit">Заказать звонок</button>
+      </li>
+      <li class="departure__item">
+        <picture>
+          <source srcset="./img/departure/pencil.avif" type="image/avif">
+          <source srcset="./img/departure/pencil.webp" type="image/webp">
+          <img loading="lazy" src="./img/departure/pencil.png" class="image" width="60" height="60" alt="pencil-icon">
+        </picture>
+        <div class="departure__item-descr">
+          Запишитесь на замер и получите персональную скидку
+        </div>
+        <button class="btn-reset departure__btn" type="submit">Заказать звонок</button>
+      </li>
+      <li class="departure__item">
+        <picture>
+          <source srcset="./img/departure/handle.avif" type="image/avif">
+          <source srcset="./img/departure/handle.webp" type="image/webp">
+          <img loading="lazy" src="./img/departure/handle.png" class="image" width="60" height="60" alt="handle-icon">
+        </picture>
+        <div class="departure__item-descr">
+          Вызовите менеджера с образцами и каталогами и получите дизайн-проект бесплатно
+        </div>
+        <button class="btn-reset departure__btn" type="submit">Заказать звонок</button>
+      </li>
+    </ul>
+
+    </div>
+  </div>
+</section>
+
+      <section class="timers">
+  <div class="container">
+    <div class="timers__wrapper">
+      <h2 class="timers__title">Поднятие цен <span>1 апреля</span></h2>
+      <div class="timers__descr-box">
+        <p class="timers__descr">Скоро цены поднимутся на 20%. Успей купить!</p>
+        <button class="btn-reset timers__btn btn" type="submit">
+          Оставить заявку
+        </button>
+      </div>
+
+      <div class="timers__timer">
+        <div class="timers__items">
+          <div class="timers__item-box">
+            <div class="timers__item timers__days">00</div>
+          </div>
+          <div class="timers__item-box">
+            <div class="timers__item timers__hours">00</div>
+          </div>
+          <div class="timers__item-box">
+            <div class="timers__item timers__minutes">00</div>
+          </div>
+          <div class="timers__item-box">
+            <div class="timers__item timers__seconds">00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="review">
+  <div class="container">
+    <h3 class="review__title">Видеообзор дверей</h3>
+
+    <div class="swiper gallery-top">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider1.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider2.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider3.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider4.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider5.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider6.png)"></div>
+
+      </div>
+      <!-- Add Arrows -->
+
+      <div class="swiper-button-next swiper-button-white"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+
+    </div>
+    <div class="swiper gallery-thumbs">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider1.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider2.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider3.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider4.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider5.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/slider/slider6.png)"></div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      <section class="feedback">
+  <div class="container">
+    <h2 class="feedback__title">форма консультации</h2>
+    <h4 class="feedback__subtitle">Скидка до 15% по телефону. ПОСЕТИТЕ САЛОН ESTET В МОСКВЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК!</h4>
+
+    <form action="#" class="form">
+      <label class="form__label">
+        <span class="form__span-name">Имя</span>
+        <input type="text" name="Имя" class="input-reset form__input" placeholder="Имя">
+      </label>
+      <label class="form__label">
+        <span class="form__span-name">Номер телефона</span>
+        <input type="number" name="Имя" class="input-reset form__input" placeholder="+7 (---) --- -- --">
+      </label>
+
+      <p class="form__descr">Отправляя данную форму, я подтверждаю согласие на обработку <a href="#">персональных данных</a>.</p>
+      <button class="btn-reset form__btn">Заказать звонок</button>
+    </form>
+
+  </div>
+</section>
+
+      <section class="foto">
+  <div class="container">
+    <div class="foto__header">
+      <h2 class="foto__title">Фото работ</h2>
+
+      <div class="foto__arrows-btn">
+        <div class="button-next arrows-btn">
+          <picture>
+            <source srcset="./img/arrow-prev.avif" type="image/avif" />
+            <source srcset="./img/arrow-prev.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/arrow-prev.png"
+              class="image"
+              width=""
+              height=""
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="button-prev arrows-btn">
+          <picture>
+            <source srcset="./img/arrow-next.avif" type="image/avif" />
+            <source srcset="./img/arrow-next.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="./img/arrow-next.png"
+              class="image"
+              width=""
+              height=""
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <div class="foto-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="foto__content-box">
+            <picture>
+              <source srcset="./img/foto/foto1.avif" type="image/avif" />
+              <source srcset="./img/foto/foto1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/foto/foto1.png"
+                class="image"
+                width="603"
+                height="723"
+                alt="photo-slider"
+              />
+            </picture>
+            <p class="foto-descr">
+              Межкомнатная дверь U9 в скрытом коробе под отделку
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="foto__content-box">
+            <picture>
+              <source srcset="./img/foto/foto2.avif" type="image/avif" />
+              <source srcset="./img/foto/foto2.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/foto/foto2.png"
+                class="image"
+                width="603"
+                height="723"
+                alt="photo-slider"
+              />
+            </picture>
+
+            <p class="foto-descr">Межкомнатная дверь US4 в скрытом коробе</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="foto__content-box">
+            <picture>
+              <source srcset="./img/foto/foto3.avif" type="image/avif" />
+              <source srcset="./img/foto/foto3.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/foto/foto3.png"
+                class="image"
+                width="603"
+                height="723"
+                alt="photo-slider"
+              />
+            </picture>
+            <p class="foto-descr">
+              Межкомнатная дверь U9 в скрытом коробе под отделку
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="foto__content-box">
+            <picture>
+              <source srcset="./img/foto/foto4.avif" type="image/avif" />
+              <source srcset="./img/foto/foto4.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/foto/foto4.png"
+                class="image"
+                width="603"
+                height="723"
+                alt="photo-slider"
+              />
+            </picture>
+            <p class="foto-descr">Межкомнатная дверь US4 в скрытом коробе</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="contact">
+  <div class="container">
+    <div class="contact__wrapper">
+
+      <div class="contact__maps">
+        <div class="contact__map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/?ll=37.704925%2C55.728093&utm_medium=mapframe&utm_source=maps&z=10.6" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск мест</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUVqRrb9A" style="width:100%; position:relative;" height="560"></iframe></div>
+      </div>
+
+      <div class="contact__address">
+
+        <div class="contact__accordion-box">
+          <details class="contact__accordion">
+            <summary class="contact__accordion-control">
+              <h3 class="contact__accordion-city">Москва</h3>
+              <span class="contact__accordion-icon"></span>
+            </summary>
+            <div class="contact__accordion-content">
+              Санкт-Петербург
+            </div>
+            <div class="contact__accordion-content">
+              Ростов-на-Дону
+            </div>
+            <div class="contact__accordion-content">
+              Красногорск
+            </div>
+          </details>
+
+          <details class="contact__accordion">
+            <summary class="contact__accordion-control">
+              <h3 class="contact__accordion-station">Все станции</h3>
+              <span class="contact__accordion-icon"></span>
+            </summary>
+            <div class="contact__accordion-content">
+              Краснопресненская
+            </div>
+            <div class="contact__accordion-content">
+              Красный Балтиец
+            </div>
+            <div class="contact__accordion-content">
+              Пушкинская
+            </div>
+            <div class="contact__accordion-content">
+              Фрунзенская
+            </div>
+            <div class="contact__accordion-content">
+              Площадь Гагарина
+            </div>
+          </details>
+
+        </div>
+
+        <ul class="list-reset contact__accordion-list">
+          <li class="contact__accordion-item">
+            <button class="btn-reset contact__accordion-control-btn" aria-expanded="false">
+              <span class="contact__accordion-item-span">Фирменный салон ESTET Красногорск</span>
+              <span class="contact__accordion-item-span-icon"></span>
+            </button>
+
+            <div class="contact__accordion-item-content" aria-hidden="true">
+                <div class="contact__address-span">г. Красногорск, ул. Международная, д. 6, ТЦ «ТВОЙ ДОМ», к. 1, 2 этаж
+                «МЯКИНИНО», «СТРОГИНО»</div>
+
+                <ul class="list-reset contact__list">
+                  <li class="contact__item">
+                    <div class="contact__mode">Режим работы:</div>
+                    <div class="contact__mode-cursor">пн-вс 10:00–21:00</div>
+                  </li>
+                  <li class="contact__item">
+                    <div class="contact__mode">Телефон:</div>
+                    <div class="contact__mode">
+                      <a class="contact__mode-link" href="tel:+74956649888">+7 495 664-98-88</a>
+                    </div>
+                  </li>
+                  <li class="contact__item">
+                    <div class="contact__mode">E-mail:</div>
+                    <div class="contact__mode">
+                      <a class="contact__mode-link" href="mailto:td-e@doors.group">td-e@doors.group</a>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="contact__content-box">
+
+                  <div class="contact__img-box">
+                    <picture>
+                      <source srcset="./img/contact/contact1.avif" type="image/avif">
+                      <source srcset="./img/contact/contact1.webp" type="image/webp">
+                      <img loading="lazy" src="./img/contact/contact1.png" class="image" width="80" height="80" alt="">
+                    </picture>
+                    <picture>
+                      <source srcset="./img/contact/contact2.avif" type="image/avif">
+                      <source srcset="./img/contact/contact2.webp" type="image/webp">
+                      <img loading="lazy" src="./img/contact/contact2.png" class="image" width="80" height="80" alt="">
+                    </picture>
+                    <picture>
+                      <source srcset="./img/contact/contact3.avif" type="image/avif">
+                      <source srcset="./img/contact/contact3.webp" type="image/webp">
+                      <img loading="lazy" src="./img/contact/contact3.png" class="image" width="80" height="80" alt="">
+                    </picture>
+                    <picture>
+                      <source srcset="./img/contact/contact4.avif" type="image/avif">
+                      <source srcset="./img/contact/contact4.webp" type="image/webp">
+                      <img loading="lazy" src="./img/contact/contact4.png" class="image" width="80" height="80" alt="">
+                    </picture>
+                  </div>
+
+                  <div class="contact__btn-box">
+                    <button class="btn-reset btn contact__btn-grey" data-graph-path="">О магазине</button>
+                    <button class="btn-reset btn contact__btn-green" data-graph-path="">Записаться на визит</button>
+                  </div>
+                </div>
+
+            </div>
+
+          </li>
+
+          <li class="contact__accordion-item">
+            <button class="btn-reset contact__accordion-control-btn" aria-expanded="false">
+              <span class="contact__accordion-item-span">Фирменный салон ESTET Санкт-Петербург</span>
+              <span class="contact__accordion-item-span-icon"></span>
+            </button>
+            <div class="contact__accordion-item-content" aria-hidden="true">
+                <div class="contact__address-span">г. Красногорск, ул. Международная, д. 6, ТЦ «ТВОЙ ДОМ», к. 1, 2 этаж
+                «МЯКИНИНО», «СТРОГИНО»</div>
+            </div>
+          </li>
+
+          <li class="contact__accordion-item">
+            <button class="btn-reset contact__accordion-control-btn" aria-expanded="false">
+              <span class="contact__accordion-item-span">Фирменный салон ESTET Москва</span>
+              <span class="contact__accordion-item-span-icon"></span>
+            </button>
+            <div class="contact__accordion-item-content" aria-hidden="true">
+                <div class="contact__address-span">г. Красногорск, ул. Международная, д. 6, ТЦ «ТВОЙ ДОМ», к. 1, 2 этаж
+                «МЯКИНИНО», «СТРОГИНО»</div>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="contact__scroll-up">
+          <div class="contact__text-up">Вверх</div>
+          <div class="reset-btn contact__arrow-up">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <ul class="list-reset footer__list">
+      <li class="footer__item">
+        г. Москва, Егорьевский пр-д, д. 2А, стр. 2, 2 этаж, оф. 202, 205
+        <a class="footer__item-link">Посмотреть адреса всех салонов</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="tel:88002225965">8 800 222 59 65</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="mailto:main@estetdveri.ru">main@estetdveri.ru</a>
+      </li>
+    </ul>
+    <div class="footer__copyright">
+      <a class="footer__copyright-link" href="#">Политика конфиденциальности</a>
+      <p class="footer__descr">© 2022. ESTET | Дверные технологии — официальный сайт фабрики. Все права защищены.</p>
+
+      <ul class="list-reset social" title="">
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--tg" aria-label="Наша страничка в Телеграме">
+          <picture>
+            <source srcset="./img/telegram.avif" type="image/avif">
+            <source srcset="./img/telegram.webp" type="image/webp">
+            <img loading="lazy" src="./img/telegram.png" class="image" width="16" height="16" alt="telegram-icon">
+          </picture>
+        </a></li>
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--vk" aria-label="Наша страничка во Вконтакте">
+          <picture>
+            <source srcset="./img/vk.avif" type="image/avif">
+            <source srcset="./img/vk.webp" type="image/webp">
+            <img loading="lazy" src="./img/vk.png" class="image" width="16" height="16" alt="vkontakte-icon">
+          </picture>
+        </a></li>
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--inst" aria-label="Наша страничка в Инстаграме">
+          <picture>
+            <source srcset="./img/inst.avif" type="image/avif">
+            <source srcset="./img/inst.webp" type="image/webp">
+            <img loading="lazy" src="./img/inst.png" class="image" width="16" height="16" alt="instagram-icon">
+          </picture>
+        </a></li>
+      </ul>
+
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>
